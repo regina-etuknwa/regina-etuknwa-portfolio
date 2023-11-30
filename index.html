@@ -44,7 +44,6 @@
         </div>
     </nav>
     <section class="homepage" id="homepage">
-        
         <div class="homepage-body">
             <img src="./headshot.JPG" alt="headshot" class="headshot">
             <div class="home-description">
@@ -53,11 +52,12 @@
                 <p class="homepage-bio">I create responsive, accessible, and clean websites using HTML5, CSS3 &#38; JavaScript.</p>
                 
                 <a href="#contact-section" class="homepage-contact-link">
-                    <button class="homepage-contact-btn">CONTACT ME</button>
+                    <button class="homepage-contact-btn btn">CONTACT ME</button>
                 </a>
             </div>
         </div>
     </section>
+
 
     <section class="about-section" id="about-section">
         <div class="about-section-body">
@@ -68,13 +68,13 @@
                  When I'm not in front of my computer, I am either on the basketball court or spending time with friends and family.
                 </p>
                 <a class="resume-link" href="https://docs.google.com/document/d/1Lo4RmfhX3gfnf0RfeuIV9l-oYDJhV1Feg4Zj5j9YAX4/edit#heading=h.5x0d5h95i329" target="_blank">
-                    <button class="resume-btn">Download Resume</button>
+                    <button class="resume-btn btn">Download Resume</button>
                 </a>
             </div>
-            <img src="./headshot2.JPG" alt="headshot 2" class="headshot">
+            <img src="./headshot2.jpg" alt="headshot 2" class="headshot">
         </div>
-
     </section>
+
 
     <section class="projects-section" id="projects-section">
         <div class="section-body">
@@ -161,16 +161,36 @@
                 </div>
             </div>
         </div>
-        
     </section>
+
 
     <section class="contact-section" id="contact-section">
         <!-- contact form  -->
+        <div class="section-body contact-section-body">
+            <div class="contact-intro">
+                <h2 class="headings dark-purple contact-heading">
+                    Contact Me. <br> Tell me about your project.
+                </h2>
+                <p class="contact-text">Let us bring your idea to life!</p>
+            </div>
+            <div class="contact-form">
+                <h3 class="form-heading dark-purple">Send me a message</h3>
+
+                <input class="form-input-field form-name" type="text" placeholder="Full name*" name="name" id="name" required>
+                <input class="form-input-field form-email" type="email" placeholder="Email address*" name="email" id="email" required>
+                <input class="form-input-field form-subject" type="text" placeholder="Subject" name="subject" id="subject">
+                <textarea class="form-input-field form-message" placeholder="Message*" name="message" id="message" cols="30" rows="4" required></textarea>
+
+                <button class="form-submit-btn btn" type="submit">Send message</button>
+            </div>
+        </div>
     </section>
+
+
     <footer class="footer">
         <div class="footer-flex">
-            <div class="contact-info">
-                <h6 class="footer-header">GET IN TOUCH</h6>
+            <div class="footer-contact-info">
+                <h6 class="footer-header">CONTACT ME</h6>
                 <div class="footer-info">
                     <div class="footer-contact-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#462b58" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
