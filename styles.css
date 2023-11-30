@@ -584,6 +584,8 @@
 }
 
 
+
+
 @media (max-width: 600px) {
     .nav-buttons, .nav-icons {
         display: none;
@@ -600,7 +602,7 @@
     }
 
     .homepage-body{
-        padding-top: 0;
+
     }
 
     .headshot {
@@ -634,4 +636,47 @@
     .homepage-bio {
         text-align: justify;
     }
+
+
+
+
+
+    .section-body {
+        width: 340px;
+        /* padding: 40px 0;
+        padding-top: 90px; */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skill-card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-section-body{
+        flex-direction: column;
+    }
+
+    .contact-heading {
+        display: none;
+    }
+
+    .contact-text {
+        font-size: 23px;
+        font-weight: bold;
+    }
+
 }
