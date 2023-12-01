@@ -8,21 +8,34 @@ function app(){
     const menuOpenedBtn = document.querySelector(".nav-menu-btn-open");
     const menuClosedBtn = document.querySelector(".nav-menu-btn-closed");
     const menu = document.querySelector(".nav-menu");
+    const notMenuArea = document.querySelector(".not-menu-area");
+    const allMenuItems = document.querySelectorAll(".nav-menu-item");
+
+    const HIDDEN_CLASS = "hidden";
 
     function openMenu () {
-        menu.classList.remove("hidden");
-        menuClosedBtn.classList.add("hidden");
-        menuOpenedBtn.classList.remove("hidden");
+        menu.classList.remove(HIDDEN_CLASS);
+        menuClosedBtn.classList.add(HIDDEN_CLASS);
+        menuOpenedBtn.classList.remove(HIDDEN_CLASS);
+        notMenuArea.classList.remove(HIDDEN_CLASS);
+
+        notMenuArea.addEventListener('click', closeMenu);
     }
 
     function closeMenu () {
-        menu.classList.add("hidden");
-        menuClosedBtn.classList.remove("hidden");
-        menuOpenedBtn.classList.add("hidden");
+        menu.classList.add(HIDDEN_CLASS);
+        notMenuArea.classList.add(HIDDEN_CLASS);
+        menuClosedBtn.classList.remove(HIDDEN_CLASS);
+        menuOpenedBtn.classList.add(HIDDEN_CLASS);
     }
 
     menuClosedBtn.addEventListener('click', openMenu);
     menuOpenedBtn.addEventListener('click', closeMenu);
+
+    allMenuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', closeMenu);
+    })
+
 
 }
 
