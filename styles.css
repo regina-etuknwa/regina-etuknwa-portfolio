@@ -212,6 +212,10 @@
     line-height: 1.5;
 }
 
+.headshot2-mobile {
+    display: none;
+}
+
 .resume-btn {
     display: block;
     border-radius: 5px;
@@ -678,8 +682,9 @@
     }
 
     .headshot-mobile {
-        display: flex;
+        display: block;
     }
+
 
     .home-description {
         width: 300px;
@@ -694,6 +699,7 @@
     .h1 {
         font-size: 38px;
         line-height: 1.5;
+        text-align: center;
     }
 
     .h2 {
@@ -710,6 +716,29 @@
         width: 340px;
     }
 
+    .about-description{
+        display: block;
+    }
+
+    .headshot2 {
+        display: none;
+    }
+
+    .headshot2-mobile {
+        display: block;
+        height: auto;
+        width: 50%;
+        float: right;
+        margin: 9px 0 0 9px;
+    }
+
+    .bio-br {
+        display: none;
+    }
+
+    .about-me-heading {
+        font-size: 30px;
+    }
 
     .section-body {
         width: 340px;
