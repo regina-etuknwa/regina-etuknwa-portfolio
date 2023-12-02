@@ -810,6 +810,16 @@
     
 }
 
+@media (orientation: landscape) {
+    .nav-bar {
+        width: 100%;
+    }
+
+    body {
+        width: 100%;
+    }
+}
+
 .hidden {
     display: none;
 }
