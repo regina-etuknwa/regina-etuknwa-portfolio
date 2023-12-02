@@ -486,6 +486,7 @@
     background-color: var(--light-purple);
     color: var(--dark-purple);
     padding: 10px;
+    width: 100%;
 }
 
 .form-input-field:focus {
@@ -494,6 +495,22 @@
 
 .form-message{
     font-family: 'Noto Sans Glagolitic', sans-serif;
+    resize: none;
+}
+
+.form-error-text {
+    font-size: 11px;
+    color: red;
+    margin-bottom: 3px;
+    display: none;
+}
+
+.form-input.form-error .form-error-text{
+    display: block;
+}
+
+.form-input.form-error .form-input-field {
+    border: 1px solid red;
 }
 
 .form-submit-btn {
