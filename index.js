@@ -41,9 +41,8 @@ function app(){
         Message: ${message.value} <br>`;
 
         Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "reginaetuknwa@gmail.com",
-            Password : "E653CE96CBB58A592F5794AFB90838AA48E3",
+            SecureToken : "b6055773-481d-444e-a0ad-987672c1c804", 
+            
             To : 'reginaetuknwa@gmail.com',
             From : "reginaetuknwa@gmail.com",
             Subject : subject.value,
@@ -70,6 +69,14 @@ function app(){
                 input.parentElement.classList.add('form-error');
             }
 
+            if (email.value != ""){
+                checkEmailField();
+            }
+
+            email.addEventListener('keyup', () => {
+                checkEmailField();
+            })
+
             input.addEventListener('keyup', () => {
                 if (input.value != "") {
                     input.classList.remove('form-error');
@@ -80,6 +87,26 @@ function app(){
                 }
             })
         })
+    }
+
+    function checkEmailField () {
+        // const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$;
+        const emailRegEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        const emailErrorText = document.querySelector('.email-error-text');
+
+        if (!email.value.match(emailRegEx)) {
+            email.classList.add('form-error');
+            email.parentElement.classList.add('form-error');
+
+            if (email.value != "") {
+                emailErrorText.innerHTML = "*Enter a valid email address";
+            } else {
+                emailErrorText.innerHTML = "*Message cannot be blank";
+            }
+        } else {
+            email.classList.remove('form-error');
+            email.parentElement.classList.remove('form-error');
+        }
     }
 
     // E653CE96CBB58A592F5794AFB90838AA48E3
@@ -94,7 +121,12 @@ function app(){
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         checkInputs();
-        // sendEmail();
+
+        if (!fullName.classList.contains("form-error") && !email.classList.contains("form-error") && !subject.classList.contains("form-error") && !message.classList.contains("form-error") ) {
+            sendEmail();
+            form.reset();
+            return false;
+        }
     })
 
 }
